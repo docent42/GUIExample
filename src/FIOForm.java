@@ -48,6 +48,7 @@ public class FIOForm {
                 expandButton.setVisible(true);
             }
             else {
+                errorMessage.setText("Ошибка ввода данных !!! Заполните все поля ");
                 errorMessage.setVisible(true);
             }
         });
@@ -55,7 +56,7 @@ public class FIOForm {
         expandButton.addActionListener(e -> {
             fullNameText = fullNameField.getText();
 
-            if (fullNameField.getText().split("\\s+").length > 1 && fullNameField.getText().matches("\\S?.+"))
+            if (fullNameField.getText().split("\\s+").length > 1 && fullNameField.getText().split("\\s+").length < 4 && fullNameField.getText().matches("\\S?.+"))
             {
              // ================== Set Invisible =====================================
                 errorMessage.setVisible(false);
@@ -79,6 +80,7 @@ public class FIOForm {
                 fullNameText = "";
             }
             else {
+                errorMessage.setText("Ошибка ввода данных ! Введите через пробел Ф.И.О.");
                 errorMessage.setVisible(true);
             }
         });

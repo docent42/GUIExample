@@ -88,7 +88,7 @@
           <component id="a4da8" class="javax.swing.JLabel" binding="errorMessage">
             <constraints/>
             <properties>
-              <preferredSize width="150" height="16"/>
+              <preferredSize width="500" height="16"/>
               <text value="!!! ОШИБКА ВВОДА !!!"/>
             </properties>
           </component>
